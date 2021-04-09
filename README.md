@@ -12,8 +12,10 @@
 ## About
     The chat app has a very simple functionality
       i.   To login, please enter your name and chat room name
-      ii.  Inside the chat window you can type in the desired message and hit the 'Enter' key to send the message.
-      iii. To test the real time String exchange, you can run this app in multiple browser windows and chat amongst them.
+      ii.  Inside the chat window you can type in the desired message
+            and hit the 'Enter' key to send the message.
+      iii. To test the real time String exchange, you can run this app
+            in multiple browser windows and chat amongst them.
   
     Reference: 
       https://morioh.com/p/e0d460ace6fa
