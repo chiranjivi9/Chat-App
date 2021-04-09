@@ -39,7 +39,7 @@ router.get('/thread/:room', (req,res) => {
 
 });
 
-//TODO: FIGURE OUT HOW TO MAKE A CONNECTION
+//TODO: FIGURE OUT HOW TO MAKE A SOCKET CONNECTION ???
 router.post('/thread/:room/:username', async (req, res) => {
     console.log("POST: params: ", req.params);
     console.log("POST: body: ", req.body);

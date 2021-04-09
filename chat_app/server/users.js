@@ -18,18 +18,26 @@ const addUser = ({ id, name, room }) => {
 }
 
 const getChatRoom = (chatData) => {
-    let room = chatData[0] ? chatData[0].room : '';
-    console.log('CHAT Data', chatData);
+    let room = chatData ? chatData[0].room : '';
+    
     if(room !== '') {
         allMessages.set( room, chatData);
+        console.log('CHAT DATA: ', chatData);
     }
+
+    if(allMessages.size) {
+        return allMessages.size;
+    } 
+    return 0;
 }
 
 const displayChatRoom = (room) => {
-    console.log('inside displayChatRoom', room, ' ->',  allMessages);
+    console.log('DISPLAY CHAT ROOM CONTENTS: ', allMessages);
     if(allMessages.has(room)) {
-        console.log(allMessages.get(room));
+        return allMessages.get(room);
     }
+
+    return null;
 }
 
 const removeUser = (id) => {
@@ -39,8 +47,15 @@ const removeUser = (id) => {
 }
 
 
-const getUser = (id) => users.find((user) =>  user.id === id); 
+const getUser = (id) => {
+   let getUser = users.find((user) =>  user.id === id);
 
+   if(getUser) {
+       return getUser
+   };
+   
+   return -1;
+} 
 
 const getUsersInRoom = (room) => users.filter((user) => user.room === room);
 
