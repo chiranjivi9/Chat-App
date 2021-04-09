@@ -2,7 +2,8 @@
   Simple chat app using Socket.io, Node.js, and React.js
 
   ## Setup:
-       run  _npm i && npm start_  for both client and server side to start the development server
+    Steps:
+       Clone the repository and then from the terminal run _npm i && npm start_ for both client and server side to start the development server
        Client runs on the default react port: 3000 (localhost:3000)
        Server runs on port: 5000 (localhost:5000)
 
