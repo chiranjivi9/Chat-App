@@ -29,7 +29,6 @@ const Chat = ({ location }) => {
         setName(name);
         setRoom(room);
 
-        console.log('LOCATION!!!!', location);
         socket.emit('join', { name, room }, () => {
             //TODO: Error handling...
         });
@@ -47,12 +46,12 @@ const Chat = ({ location }) => {
     useEffect(() => {
         socket.on('message', (message) => {
             setMessages([...messages, message])
-            setMessageStore([...messageStore, message]);
+            // setMessageStore([...messageStore, message]);
         })
         socket.on("roomData", ({ users }) => {
             setUsers(users);
           });
-    }, [messages, messageStore]);
+    }, [messages]);
 
     // Send Message
     const sendMessage = (event) => {
@@ -64,12 +63,11 @@ const Chat = ({ location }) => {
       }
 
     useEffect(() => {
-        socket.emit('getAllMessages', (messageStore), () => {
+        socket.emit('getAllMessages', (messages), () => {
             //TODO: err handling
         });
     })
     console.log('1--', message, messages);
-    console.log('2--',message, messageStore);
 
     return (
         <div className="outerContainer">   

@@ -18,7 +18,7 @@ const addUser = ({ id, name, room }) => {
 }
 
 const getChatRoom = (chatData) => {
-    let room = chatData ? chatData[0].room : '';
+    let room = chatData && chatData[0] ? chatData[0].room : '';
     
     if(room !== '') {
         allMessages.set( room, chatData);
