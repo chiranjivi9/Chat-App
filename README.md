@@ -1,13 +1,13 @@
 # Knock-Chat-App
   Simple chat app using Socket.io, Node.js, and React.js
 
-Setup: 
-   run  _npm i && npm start_  for both client and server side to start the development server
-   Client runs on the default react port: 3000 (localhost:3000)
-   Server runs on port: 5000 (localhost:5000)
- 
-Tests: 
-    For running tests on the server & client side from the respective folder, _run npm test_
+  Setup: 
+     ```run  _npm i && npm start_  for both client and server side to start the development server```
+     Client runs on the default react port: 3000 (localhost:3000)
+     Server runs on port: 5000 (localhost:5000)
+
+  Tests: 
+      For running tests on the server & client side from the respective folder, _run npm test_
 
 ## About
     The chat app has a very simple functionality
